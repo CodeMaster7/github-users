@@ -5,11 +5,14 @@ function Search() {
 		<Form className='w-50 mx-auto mt-5 d-flex'>
 			<InputGroup size='lg'>
 				<Form.Control
+					placeholder='Search Github User'
 					aria-label='Large'
 					aria-describedby='inputGroup-sizing-sm'
 				/>
 			</InputGroup>
-				<Button className='ms-3' variant='primary'>Search</Button>
+			<Button className='ms-3' variant='primary'>
+				Search
+			</Button>
 		</Form>
   )
 }
