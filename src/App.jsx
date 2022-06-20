@@ -1,7 +1,10 @@
+import Home from "./containers/Home"
+
 function App() {
 	return (
 		<>
 			<h1>hello world!</h1>
+            <Home />
 		</>
 	)
 }
