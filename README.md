@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#component-breakdown">Component Breakdown</a></li>
+      </ul>
+    </li>
+    <li><a href="#deployment">Deployment</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For this project I fetch the Github Users API for profile information on a specific user. You'll create a form that submits a username to the API and return the results on the same page.
 
-### `npm test`
+The Github API URL is (replace [username] with an actual username): https://api.github.com/users/[username]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [React.js](https://reactjs.org/)
+* [Bootstrap](https://getbootstrap.com)
+* [react-Bootstrap](https://react-bootstrap.netlify.app/getting-started/introduction/)
+* [react-router-dom v6](https://reactrouter.com/)
 
-### `npm run eject`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- GETTING STARTED -->
+## Getting Started
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+_how you can install and start the app._
 
-## Learn More
+1. Github API Docs at [API](https://developer.github.com/v3/.)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/CodeMaster7/github-users.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Start application
+   ```sh
+   npm start
+   ```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Component Breakdown
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## `App.js` (funtional component)
 
-### Code Splitting
+- contains the TopNavbar component
+- one route to the Home component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## `TopNavbar` (functional component)
 
-### Analyzing the Bundle Size
+- this component just renders a bootstrap navbar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## `Home` (functional component)
 
-### Making a Progressive Web App
+- This component fetches a user from saved state and passes it as a user objects as a prop (to `UserCard`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  #### Functions
 
-### Advanced Configuration
+`handleChange`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- This will `setState` to change the username value based on what is typed
 
-### Deployment
+`handleSubmit`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- On submit the form will take the username value and make a `fetch()` request to the Github API
+- The response from the API will be a _single user_.
 
-### `npm run build` fails to minify
+## `UserCard` (functional component)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This component render the user card with data through props
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Deployment
+
+[Netlify](https://www.netlify.com/)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+<br>
+<!-- CONTACT -->
+## Contact
+
+Sam Bonfanti - [Email](sammybonfanti@gmail.com) - sammybonfanti@gmail.com
+Linkedin- [Linkedin](https://www.linkedin.com/in/sambonfanti) - https://www.linkedin.com/in/sambonfanti
+
+<p align="right">(<a href="#top">back to top</a>)</p>
