@@ -1,21 +1,19 @@
-import {Card, Button} from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 
-function UserCard() {
-  return (
+function UserCard({ user }) {
+	return (
 		<Card className='mx-auto mt-5' style={{ width: '18rem' }}>
 			<Card.Img
 				variant='top'
-				src='https://react.semantic-ui.com/images/avatar/large/matthew.png'
+				src={user ? `${user.avatar_url}`: 'https://react.semantic-ui.com/images/avatar/large/matthew.png'}
 			/>
 			<Card.Body>
-				<Card.Title>Card Title</Card.Title>
+				<Card.Title>{user.login}</Card.Title>
 				<Card.Text>
-					Some quick example text to build on the card title and make
-					up the bulk of the card's content.
+					{user.bio}
 				</Card.Text>
-				<Button variant='primary'>View Profile</Button>
 			</Card.Body>
 		</Card>
-  )
+	)
 }
 export default UserCard
