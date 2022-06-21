@@ -1,7 +1,6 @@
 <div id="top"></div>
 
 <!-- TABLE OF CONTENTS -->
-<details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -20,7 +19,7 @@
     <li><a href="#deployment">Deployment</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
-</details>
+
 
 
 
@@ -103,7 +102,7 @@ _how you can install and start the app._
 ## Deployment
 
 [Netlify](https://www.netlify.com/)
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github-user-app1.netlify.app](https://github-user-app1.netlify.app)
 
 <br>
 <!-- CONTACT -->
