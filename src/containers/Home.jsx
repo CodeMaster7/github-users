@@ -5,7 +5,6 @@ import UserCard from '../components/UserCard'
 function Home() {
 	const [userInput, setUserInput] = useState('')
 	const [user, setUser] = useState('[]')
-	const [error, setError] = useState('')
 
 	const handleSearch = (e) => {
 		e.preventDefault()
